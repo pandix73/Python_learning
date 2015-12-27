@@ -14,7 +14,7 @@ def checkio(text):
     from operator import attrgetter 
     
     for i in count:
-        i.num = 26-i.num
+        i.num = -i.num
     count.sort(key = attrgetter('num', 'name'))
     
     return count[0].name
