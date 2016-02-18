@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 payload = {
 'mode':'login',
 'return_to':'/',
-'pixiv_id':'pandix',
-'pass':'49867515',
+'pixiv_id':'',
+'pass':'',
 'skip':'1'
 }
 
