@@ -34,7 +34,7 @@ with session() as c:
 		path = "https://osu.ppy.sh/d/"+map.get('id')
 		download = c.get(path)
 		print (download.url)
-		fold = r"C:\Users\pandix\Desktop\Python_learning\crawler\download\map_" # my path
+		fold = r"C:\Users\pandix\Desktop\Python_learning\crawler\osu_map\download\map_" # my path
 		fold += map.get('title') + r".osz"
 		
 		wget.download(download.url, out = fold, bar=None)
