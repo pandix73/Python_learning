@@ -106,11 +106,6 @@ class aiguess():
 		self.possibleList[:] = itertools.filterfalse(lambda x:result(compare(x, num)) != res, self.possibleList)
 		self.round += 1
 
-
-
-			
-
-
 def aigame(ans):
 	ai = aiguess()
 	round = 1
@@ -118,11 +113,14 @@ def aigame(ans):
 		guessnum = ai.guess()
 		comp = compare(guessnum, ans)
 		ai.guessResult(guessnum, result(comp))
-		#print('%d round guess %s:' % (round, guessnum), result(comp))
+		print('Round-%d %s %s' % (round, guessnum, result(comp)))
 		if comp == count[4][0]:
-			print(' got %s in %d times' % (ans, round))
 			return
+		print()
 		round += 1
 
-for num in list(map(''.join, itertools.permutations('1234567890', 4))):
-	aigame(num)
+#for num in list(map(''.join, itertools.permutations('1234567890', 4))):
+#	aigame(num)
+
+num = input()
+aigame(num)
